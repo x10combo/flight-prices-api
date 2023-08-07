@@ -212,4 +212,10 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'services' => [
+        // ...
+        'guzzle' => [
+            'verify' => resource_path('certs/cacert.pem'),
+        ],
+    ],
 ];
