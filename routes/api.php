@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FlightController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/flights',  [FlightController::class, 'getFlightPrices']);
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-Route::post('/flights', 'App\Http\Controllers\FlightController@getFlightPrices');
-
-
-
