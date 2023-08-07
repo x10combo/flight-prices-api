@@ -34,10 +34,21 @@ class FlightController extends Controller
             $response = $client->request('GET', $url, ['query' => $params]);
 
             // Get the response body
-            $flightData = $response->getBody()->getContents();
+            $flightData = json_decode($response->getBody()->getContents(), true);
 
-            // Return the response as JSON
-            return response()->json(['flights' => json_decode($flightData)], 200);
+             // Map the data to extract specific properties
+            $mappedData = array_map(function ($flight) {
+                return [
+                    'price' => $flight['outbound']['price']['value'],
+                    'departureAirport' => $flight['outbound']['departureAirport']['iataCode'],
+                    'arrivalAirport' => $flight['outbound']['arrivalAirport']['iataCode'],
+                    'departureDate' => $flight['outbound']['departureDate'],
+                    'arrivalDate' => $flight['outbound']['arrivalDate'],
+                ];
+            }, $flightData['fares']);
+
+            // Return the mapped response as JSON
+            return response()->json(['flights' => $mappedData], 200);
         } catch (\Exception $e) {
             // Handle any errors that occurred during the request
             return response()->json(['error' => $e->getMessage()], 500);
