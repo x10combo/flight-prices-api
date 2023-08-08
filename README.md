@@ -190,7 +190,7 @@ DB_PASSWORD=your_database_password
 which can be done by opening Inspect Element (F12) and accessing the Network tab:
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/0bb53908-f267-496d-9d44-a6cd48deabea">
 
-We can now access the flight API of the site.
+<b>Make sure to refresh the site</b> and open Network to find the mentioned URL. We can now access the flight API of the site.
 
  
 <h3 id="endpoint">Endpoint</h3>
