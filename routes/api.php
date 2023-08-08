@@ -15,8 +15,13 @@ use App\Http\Controllers\FlightController;
 |
 */
 
+
+// Defines a route to handle POST requests for retrieving flight prices
 Route::post('/flights',  [FlightController::class, 'getFlightPrices']);
 
+// Define a route that requires authentication using the Sanctum middleware to retrieve user information
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+
+// Return the requested authenticated user's information
     return $request->user();
 });
