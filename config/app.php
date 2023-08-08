@@ -157,7 +157,7 @@ return [
     'providers' => [
 
         /*
-         * Laravel Framework Service Providers...
+         * Different Service Providers for the Laravel Framework
          */
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
@@ -212,6 +212,11 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+
+    /*
+    * Verification of validity for the cURL certificate
+    *
+    */
     'services' => [
         // ...
         'guzzle' => [
