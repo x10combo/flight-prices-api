@@ -208,13 +208,13 @@ We can now access the flight API of the site.
   <li><code>departure_date</code>: The date of departure in the format 'YYYY-MM-DD'.</li>
 </ul>
 <p>Here's our GET request done in Postman using the URL we mentioned in the Usage tab:</p>
-![image](https://github.com/x10combo/flight-prices-api/assets/115559784/153fa414-c5cf-434c-9265-4843f15dd6f6)
+https://github.com/x10combo/flight-prices-api/assets/115559784/153fa414-c5cf-434c-9265-4843f15dd6f6
 
 
 
 <h3 id="response">Response</h3>
 <p>The API responds with a JSON object containing a list of available flights and their corresponding prices, which can be accessed by sending a POST request to our URL which in this case is http://localhost:8000/api/flights. The response format is as follows:</p>
-![image](https://github.com/x10combo/flight-prices-api/assets/115559784/e945f060-2ec7-42b6-88cd-0eaa552712bb)
+https://github.com/x10combo/flight-prices-api/assets/115559784/e945f060-2ec7-42b6-88cd-0eaa552712bb
 
 <h3>cURL variant:</h3>
 <p> The last step would be to commit a POST request using cURL as an alternative to this process. This will allow us to view the flight data from within the terminal, if the user wants to. </p>
@@ -229,7 +229,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 }' http://127.0.0.1:8000/api/flights
 
 <p> As a result, you will be returned the raw flight data. You can also choose for the terminal to show you that the data was retrieved successfully in a statement by adding it into the FlightController.php file, but that may or may not provide you with the data itself, so I chose this as an alternative instead. The reply should look like this: </p>
-![image](https://github.com/x10combo/flight-prices-api/assets/115559784/ef48b61f-589c-4b3e-baf4-6597d9bb6f2c)
+https://github.com/x10combo/flight-prices-api/assets/115559784/ef48b61f-589c-4b3e-baf4-6597d9bb6f2c
 
 
 
