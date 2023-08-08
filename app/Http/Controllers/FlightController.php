@@ -1,19 +1,30 @@
 <?php
 
+
 namespace App\Http\Controllers;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
+/**
+ * FlightController as a class handles requests used for recieving the flight prices and flight details.
+ * Its' @package is found in App\Http\Controllers.
+ */
 class FlightController extends Controller
 {
+    /**
+     * This function retrieves flight prices based on provided values for departure, arrival and departure date.
+     * @param Request $request represents the HTTP request object containing user input data.
+     * @return \Illuminate\Http\JsonResponse represents the JSON response containing flight details and prices.
+     */
     public function getFlightPrices(Request $request)
     {
+        // Extraction of input parameters from the given request
         $departure = $request->input('departure');
         $arrival = $request->input('arrival');
         $departure_date = $request->input('departure_date');
         $url = 'https://www.ryanair.com/api/farfnd/3/oneWayFares';
 
-        // GET request parameters
+        // GET request parameters for flight searching
         $params = [
             'ToUs' => 'AGREED',
             'arrivalAirportIataCode' => $arrival,
@@ -27,16 +38,17 @@ class FlightController extends Controller
             'priceValueTo' => 150,
         ];
 
+        // Creation of a new Guzzle HTTP client using the $client variable.
         $client = new Client();
 
         try {
-            // Make the GET request
+            // Creation of a GET request to retrieve flight data from the API
             $response = $client->request('GET', $url, ['query' => $params]);
 
-            // Get the response body
+            // Decoding of a response body to extract the flight data
             $flightData = json_decode($response->getBody()->getContents(), true);
 
-             // Map the data to extract specific properties
+             // Mapping of the flight data for the purpose of extracting specific properties
             $mappedData = array_map(function ($flight) {
                 return [
                     'price' => $flight['outbound']['price']['value'],
@@ -47,10 +59,12 @@ class FlightController extends Controller
                 ];
             }, $flightData['fares']);
 
-            // Return the mapped response as JSON
+            // Returns the mapped response as JSON with a HTTP Status of 200 (OK)
             return response()->json(['flights' => $mappedData], 200);
         } catch (\Exception $e) {
-            // Handle any errors that occurred during the request
+            /**  Handles and then returns any errors that may occurr 
+            *during the request with an error code of 500 (Internal Server Error)
+            */
             return response()->json(['error' => $e->getMessage()], 500);
         }
     }
