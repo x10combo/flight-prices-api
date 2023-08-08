@@ -183,11 +183,11 @@ DB_PASSWORD=your_database_password
 <p>Beforehand, we need to visit https://www.ryanair.com/flights/gb/en.</p>
 
 <p>After we have typed our flight specifics beforehand, the link should look something like this:</p>
-![image](https://github.com/x10combo/flight-prices-api/assets/115559784/03aede7c-12c7-40ea-aba0-9de87dc2035b).
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/03aede7c-12c7-40ea-aba0-9de87dc2035b.">
 
 <p>Searching anything at all will provide us with a URL which we need to send a GET request to via Postman. It is crucial to find this, 
 which can be done by opening Inspect Element (F12) and accessing the Network tab:
-![image](https://github.com/x10combo/flight-prices-api/assets/115559784/0bb53908-f267-496d-9d44-a6cd48deabea)
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/0bb53908-f267-496d-9d44-a6cd48deabea">
 
 We can now access the flight API of the site.
 
@@ -208,28 +208,30 @@ We can now access the flight API of the site.
   <li><code>departure_date</code>: The date of departure in the format 'YYYY-MM-DD'.</li>
 </ul>
 <p>Here's our GET request done in Postman using the URL we mentioned in the Usage tab:</p>
-https://github.com/x10combo/flight-prices-api/assets/115559784/153fa414-c5cf-434c-9265-4843f15dd6f6
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/153fa414-c5cf-434c-9265-4843f15dd6f6">
 
 
 
 <h3 id="response">Response</h3>
 <p>The API responds with a JSON object containing a list of available flights and their corresponding prices, which can be accessed by sending a POST request to our URL which in this case is http://localhost:8000/api/flights. The response format is as follows:</p>
-https://github.com/x10combo/flight-prices-api/assets/115559784/e945f060-2ec7-42b6-88cd-0eaa552712bb
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/e945f060-2ec7-42b6-88cd-0eaa552712bb">
 
 <h3>cURL variant:</h3>
 <p> The last step would be to commit a POST request using cURL as an alternative to this process. This will allow us to view the flight data from within the terminal, if the user wants to. </p>
 This can be done by inputting this code snppet into a terminal, preferably Bash:
 (NOTE: Do not close your current Bash terminal because that will terminate your laravel server. Open a new one.)
 
+<code>
 curl -X POST -H "Content-Type: application/json" -d '{
     "flight_number": "ABC123",
     "origin": "New York",
     "destination": "Los Angeles",
     "departure_time": "2023-08-07T12:00:00"
 }' http://127.0.0.1:8000/api/flights
+</code>
 
 <p> As a result, you will be returned the raw flight data. You can also choose for the terminal to show you that the data was retrieved successfully in a statement by adding it into the FlightController.php file, but that may or may not provide you with the data itself, so I chose this as an alternative instead. The reply should look like this: </p>
-https://github.com/x10combo/flight-prices-api/assets/115559784/ef48b61f-589c-4b3e-baf4-6597d9bb6f2c
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/ef48b61f-589c-4b3e-baf4-6597d9bb6f2c">
 
 
 
