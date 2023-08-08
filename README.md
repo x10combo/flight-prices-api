@@ -18,10 +18,11 @@
       <li><a href="#endpoint">Endpoint</a></li>
       <li><a href="#request">Request</a></li>
       <li><a href="#response">Response</a></li>
+      <li><a href="#curl">cURL</a></li>
+      <li><a href="#puppeteer">Puppeteer Automatization</a></li>
+      <li><a href="#masking">Masking</a></li>
     </ul>
   </li>
-  <li><a href="#tools">Tools</a></li>
-  <li><a href="#notes">Notes</a></li>
 </ul>
 
 <h2 id="getting-started">Getting Started</h2>
@@ -216,7 +217,7 @@ We can now access the flight API of the site.
 <p>The API responds with a JSON object containing a list of available flights and their corresponding prices, which can be accessed by sending a POST request to our URL which in this case is http://localhost:8000/api/flights. The response format is as follows:</p>
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/e945f060-2ec7-42b6-88cd-0eaa552712bb">
 
-<h3>cURL variant:</h3>
+<h3 id="curl">cURL variant:</h3>
 <p> The last step would be to commit a POST request using cURL as an alternative to this process. This will allow us to view the flight data from within the terminal, if the user wants to. </p>
 This can be done by inputting this code snppet into a terminal, preferably Bash:
 (NOTE: Do not close your current Bash terminal because that will terminate your laravel server. Open a new one.)
@@ -235,5 +236,8 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 
 
-<h3>Puppeteer Automatizaion</h3>
+<h3 id="puppeteer">Puppeteer Automatizaion</h3>
+[TBA - WIP]
+
+<h3 id="masking">Masking</h3>
 [TBA - WIP]
