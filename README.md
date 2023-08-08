@@ -220,7 +220,7 @@ We can now access the flight API of the site.
 <p> The last step would be to commit a POST request using cURL as an alternative to this process. This will allow us to view the flight data from within the terminal, if the user wants to. </p>
 This can be done by inputting this code snppet into a terminal, preferably Bash:
 (NOTE: Do not close your current Bash terminal because that will terminate your laravel server. Open a new one.)
-
+<p> </p>
 <code>
 curl -X POST -H "Content-Type: application/json" -d '{
     "flight_number": "ABC123",
