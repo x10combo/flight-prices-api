@@ -21,6 +21,7 @@
       <li><a href="#curl">cURL</a></li>
       <li><a href="#puppeteer">Puppeteer Automatization</a></li>
       <li><a href="#masking">Masking</a></li>
+      <li><a href="#unit-testing">Unit Testing</a></li>
     </ul>
   </li>
 </ul>
@@ -240,4 +241,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 [TBA - WIP]
 
 <h3 id="masking">Masking</h3>
+[TBA - WIP]
+
+<h3 id="unit-testing">Unit Testing</h3>
 [TBA - WIP]
