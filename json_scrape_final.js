@@ -23,7 +23,8 @@ function createSquareBorder(content) {
 }
 
 (async () => {
-  const browser = await puppeteer.launch();
+  // Proxy server functionality via Charles
+  const browser = await puppeteer.launch({ args: ['--proxy-server=http://127.0.0.1:8888'] });
   const page = await browser.newPage();
 
   // Asks the user for input values which are then used to directly edit the page URL
