@@ -236,9 +236,11 @@ curl -X POST -H "Content-Type: application/json" -d '{
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/ef48b61f-589c-4b3e-baf4-6597d9bb6f2c">
 
 
-
-<h3 id="puppeteer">Puppeteer Automatizaion</h3>
+<h3 id="puppeteer">Puppeteer Automation</h3>
 [TBA - WIP]
+
+<h1><b><strong>///NOTE: The following categories are thorough and correct explanations on how to integrate these features.
+They do work on their own, and I judged them as small-sized tasks. However, for them to be fully functional, Puppeteer Automation needs to be functional as well, a feature which I am still working on. </strong></b></h1>
 
 <h3 id="masking">Masking</h3>
 [TBA - WIP]
