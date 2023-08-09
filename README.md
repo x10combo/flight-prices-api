@@ -21,6 +21,7 @@
       <li><a href="#curl">cURL</a></li>
       <li><a href="#puppeteer">Puppeteer Automatization</a></li>
       <li><a href="#masking">Masking</a></li>
+      <li><a href="#unit-testing">Unit Testing</a></li>
     </ul>
   </li>
 </ul>
@@ -191,6 +192,8 @@ which can be done by opening Inspect Element (F12) and accessing the Network tab
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/0bb53908-f267-496d-9d44-a6cd48deabea">
 
 <b>Make sure to refresh the site</b> and open Network to find the mentioned URL. We can now access the flight API of the site.
+<p><strong>NOTE:</strong> This API URL is related to a specific flight which was available at testing. It may stil be available at the time of writing this, but if it's not,
+just send another request as the steps mention with different (correct) details and there should be no problems. </p>
 
  
 <h3 id="endpoint">Endpoint</h3>
@@ -217,6 +220,17 @@ which can be done by opening Inspect Element (F12) and accessing the Network tab
 <p>The API responds with a JSON object containing a list of available flights and their corresponding prices, which can be accessed by sending a POST request to our URL which in this case is http://localhost:8000/api/flights. The response format is as follows:</p>
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/e945f060-2ec7-42b6-88cd-0eaa552712bb">
 
+<p>One important thing to note is that you will be shown the cheapest flight for the specific parameters that you enter. For example, below you can see that I have searched for a flight which departs from Tirana (TIA) and lands in Catania (CTA). This specific flight is designated for November, so the value of "departure_date" should be the last of the month. Since the request I sent matches the flight data on the website, I am presented with the specific data as well as the price, which I was looking for. </p> 
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/c94d23b3-f9f2-4b49-bccb-a3880a4199b5">
+
+
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/7b6bc2eb-3252-4e16-b85c-6e6242d76640">
+
+<p>The reason why it matters for the data entered to be correct is that if we search for a flight with data values that are not present in the website, we will get an empty array, which of course means that flight does not exist. (Notice the intentional typo that I have made here)</p>
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/09e90bb2-b29b-4025-adff-c9aa43590cd8)">
+
+
+
 <h3 id="curl">cURL variant:</h3>
 <p> The last step would be to commit a POST request using cURL as an alternative to this process. This will allow us to view the flight data from within the terminal, if the user wants to. </p>
 This can be done by inputting this code snppet into a terminal, preferably Bash:
@@ -235,9 +249,14 @@ curl -X POST -H "Content-Type: application/json" -d '{
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/ef48b61f-589c-4b3e-baf4-6597d9bb6f2c">
 
 
-
-<h3 id="puppeteer">Puppeteer Automatizaion</h3>
+<h3 id="puppeteer">Puppeteer Automation</h3>
 [TBA - WIP]
 
+<h1><b>///NOTE: The following categories below are thorough and correct explanations on how to integrate these features.
+They do work on their own, and I judged them as small-sized tasks. However, for them to be fully functional, Puppeteer Automation needs to be functional as well, a feature which I am still working on. </b></h1>
+
 <h3 id="masking">Masking</h3>
+[TBA - WIP]
+
+<h3 id="unit-testing">Unit Testing</h3>
 [TBA - WIP]
