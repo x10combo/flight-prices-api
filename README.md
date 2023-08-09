@@ -192,6 +192,8 @@ which can be done by opening Inspect Element (F12) and accessing the Network tab
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/0bb53908-f267-496d-9d44-a6cd48deabea">
 
 <b>Make sure to refresh the site</b> and open Network to find the mentioned URL. We can now access the flight API of the site.
+<p><strong>NOTE:</strong> This API URL is related to a specific flight which was available at testing. It may stil be available at the time of writing this, but if it's not,
+just send another request as the steps mention with different (correct) details and there should be no problems. </p>
 
  
 <h3 id="endpoint">Endpoint</h3>
