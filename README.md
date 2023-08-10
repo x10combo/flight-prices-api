@@ -278,10 +278,14 @@ You should now see this in your Charles window:
 <p>
  That link is exactly what we need. You will notice that on my screen, SSL proxying is enabled. It needs to be for this to work. To enable it, simply right click the highlighted link in the left panel and press <b>Enable SSL Proxying</b>. (For me it's greyed out because my proxy service is actively running).</p>
  <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/aab72a8c-080d-47fd-b7c0-14b322731408">
-<p>You should then see this button having been pressed. If not, press it. It will enable SSL proxying directly, and then you can proceed. It is to be noted that once you have included your proxy connection in your Puppeteer code, <b>it will not run unless the proxy service is on.</b>. So if you're wondering why you're getting an error, it's (hopefully) that. </p>
+<p>You should then see this button having been pressed. </p>
+ <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/8abfe610-074b-4c5b-a9c9-3e4139223450">
+
+<p> If not, press it. It will enable SSL proxying directly, and then you can proceed. It is to be noted that once you have included your proxy connection in your Puppeteer code, <b>it will not run unless the proxy service is on.</b>. So if you're wondering why you're getting an error, it's (hopefully) that. </p>
+
 
 
 <h3 id="unit-testing">Unit Testing</h3>
 <p>I attempted to add Unit Testing with Jest but Puppeteer is already a good tool for automated testing so at the moment I did not implement it. Unit Testing for this project would require the refactoring of the original code in different functions, or "units",  which can be tested individually,by mocking elements like the input, client-server communication, body parameters, etc.</p>
 A good unit-testing alternative, if it must be used, is PHPUnit, which should be included with this install of Puppeteer in the vendor/bin/phpunit directory. Likewise, the execute command for these types of tests is also <code>vendor/bin/phpunit</code>. 
-You can further look into unit testing by checking out a small project i've made on this topic, which also uses PHP: https://github.com/x10combo/PHP-Calculator. This project is quite more complex, but it should follow the same set of actions to a degree.
+You can further look into unit testing by checking out a small project i've made on this topic, which also uses PHP: https://github.com/x10combo/PHP-Calculator. The flights-prices-api project is quite more complex, but it should follow the same set of actions to a degree.
