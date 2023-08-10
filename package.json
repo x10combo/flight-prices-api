@@ -12,6 +12,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "jest": "^29.6.2",
         "puppeteer-core": "^21.0.1"
     }
 }
