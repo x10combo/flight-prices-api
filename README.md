@@ -19,7 +19,7 @@
       <li><a href="#request">Request</a></li>
       <li><a href="#response">Response</a></li>
       <li><a href="#curl">cURL</a></li>
-      <li><a href="#puppeteer">Puppeteer Automatization</a></li>
+      <li><a href="#puppeteer">Puppeteer Automation</a></li>
       <li><a href="#masking">Masking</a></li>
       <li><a href="#unit-testing">Unit Testing</a></li>
     </ul>
