@@ -284,4 +284,4 @@ You should now see this in your Charles window:
 <h3 id="unit-testing">Unit Testing</h3>
 <p>I attempted to add Unit Testing with Jest but Puppeteer is already a good tool for automated testing so at the moment I did not implement it. Unit Testing for this project would require the refactoring of the original code in different functions, or "units",  which can be tested individually,by mocking elements like the input, client-server communication, body parameters, etc.</p>
 A good unit-testing alternative, if it must be used, is PHPUnit, which should be included with this install of Puppeteer in the vendor/bin/phpunit directory. Likewise, the execute command for these types of tests is also <code>vendor/bin/phpunit</code>. 
-You can further look into unit testing by checking out a small project i've made on this topic, which also uses PHP: <a href="https://github.com/x10combo/PHP-Calculator">PHP Calculator</a>
+You can further look into unit testing by checking out a small project i've made on this topic, which also uses PHP: https://github.com/x10combo/PHP-Calculator. This project is quite more complex, but it should follow the same set of actions to a degree.
