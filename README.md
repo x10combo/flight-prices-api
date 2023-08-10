@@ -268,7 +268,6 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 <p> </p>
 <p> </p>
-<h1><b>///Updated note: These features are now all functional. A note appears in historic branches saying the opposite. You should ignore it since those branches are only for showcasing. </b></h1>
 
 <h3 id="masking">Masking</h3>
 <p><b>However,</b> you need to keep in mind that the above result is only possible once you have a stable connection to Charles and have successfully set up your SSL proxying settings. This is how you're supposed to do that: </p>
