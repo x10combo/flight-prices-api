@@ -35,12 +35,11 @@
   <li><a href="https://laravel.com/">Laravel (Including the Artisan tool)</a></li>
   <li><a href="https://www.postman.com/">Postman</a></li>
   <li><a href="https://getcomposer.org/">Composer (for installing PHP libraries)</a></li>
-  <li><a href="https://getcomposer.org/">Puppeteer</a></li>
+  <li><a href="https://pptr.dev/">Puppeteer</a></li>
 </ul>
-<p>For networking and proxy/masking services:</p>
+<p>For traffic monitoring and proxy/masking services:</p>
 <ul>
   <li><a href="https://www.charlesproxy.com/">Charles</a></li>
-  <li>Various free proxies</li>
 </ul>
 
 <h3 id="installation">Installation</h3>
@@ -250,10 +249,23 @@ curl -X POST -H "Content-Type: application/json" -d '{
 
 
 <h3 id="puppeteer">Puppeteer Automation</h3>
-[TBA - WIP]
+<p><b>After installing the required dependencies, the first thing you should do is create the basic puppeteer structure in your .js file. You can name it whatever you want, and then execute it via "node [filename.js]". Everything within <code>(async()</code> will be part of the automated script. </b></p>
+<code>const puppeteer = require('puppeteer');
 
-<h1><b>///NOTE: The following categories below are thorough and correct explanations on how to integrate these features.
-They do work on their own, and I judged them as small-sized tasks. However, for them to be fully functional, Puppeteer Automation needs to be functional as well, a feature which I am still working on. </b></h1>
+(async () => {
+<---scraping logic and proxy functionality--->
+})();</code>
+
+<p> For example, as you can see below, the automated actions go as follows: The program first waits for a connection to the proxy server, then the <code>readline</code> node module is used to obtain the input data from the user regarding the flight parameters. They are then applied to the URL, which Puppeteer then travels to. Since we have headless set to true, we do not see the browser being opened and performing actions. Rather, we get our results after a short delay which is caused by the proxy service making sure we don't get blacklisted.</p>
+<p> </p>
+<p> The data is then gathered into a readable and compacted format and presented to the user with the values they requested. </p>
+
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/e2899f91-78fa-463d-b8eb-43c453cd1f33">
+
+<p>Any puppeteer script is executed with the <code>node [....].js</code> command from within your project's root directory in a terminal, after you've made sure the server and proxy service are up and running.</p>
+<p> </p>
+<p> </p>
+<h1><b>///Updated note: These features are now all functional. A note appears in historic branches saying the opposite. You should ignore it since those branches are only for showcasing. </b></h1>
 
 <h3 id="masking">Masking</h3>
 [TBA - WIP]
