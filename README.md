@@ -263,12 +263,24 @@ curl -X POST -H "Content-Type: application/json" -d '{
 <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/e2899f91-78fa-463d-b8eb-43c453cd1f33">
 
 <p>Any puppeteer script is executed with the <code>node [....].js</code> command from within your project's root directory in a terminal, after you've made sure the server and proxy service are up and running.</p>
+<p>The end result is this easy and accessible user display: </p>
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/10d4b714-93c1-497e-9b02-6c402c30e2b5">
+
 <p> </p>
 <p> </p>
 <h1><b>///Updated note: These features are now all functional. A note appears in historic branches saying the opposite. You should ignore it since those branches are only for showcasing. </b></h1>
 
 <h3 id="masking">Masking</h3>
-[TBA - WIP]
+<p><b>However,</b> you need to keep in mind that the above result is only possible once you have a stable connection to Charles and have successfully set up your SSL proxying settings. This is how you're supposed to do that: </p>
+<p>After executing all the above steps, you should make sure to open Charles and connect to a preferred port. This project uses :8888 so use that to avoid any issues. From there, press the <b>Start Recording</b> button to begin the sniffing process. From there, proceed with executing your .js script (Make sure the laravel server is running and that you are in the project's root).
+You should now see this in your Charles window:
+</p>
+<img src="https://github.com/x10combo/flight-prices-api/assets/115559784/d7fa12cd-efb3-4513-8b94-b7951ebdf20f">
+<p>
+ That link is exactly what we need. You will notice that on my screen, SSL proxying is enabled. It needs to be for this to work. To enable it, simply right click the highlighted link in the left panel and press <b>Enable SSL Proxying</b>. (For me it's greyed out because my proxy service is actively running).</p>
+ <img src="https://github.com/x10combo/flight-prices-api/assets/115559784/aab72a8c-080d-47fd-b7c0-14b322731408">
+<p>You should then see this button having been pressed. If not, press it. It will enable SSL proxying directly, and then you can proceed. It is to be noted that once you have included your proxy connection in your Puppeteer code, <b>it will not run unless the proxy service is on.</b>. So if you're wondering why you're getting an error, it's (hopefully) that. </p>
+
 
 <h3 id="unit-testing">Unit Testing</h3>
 [TBA - WIP]
