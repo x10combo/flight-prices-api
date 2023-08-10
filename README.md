@@ -2,6 +2,7 @@
 <html>
 
 <body>
+    <h1><strong>NOTE: This branch is an attempt at adding unit testing with Jest. Currently, it does not work.</strong></h1>
 <h1>Flight Prices API Documentation</h1>
 <p>The Flight Prices API is designed to provide users with a way to retrieve flight prices between different airports. This API utilizes web scraping techniques to fetch flight information and prices from the Ryanair website.</p>
 
