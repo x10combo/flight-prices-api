@@ -283,4 +283,4 @@ You should now see this in your Charles window:
 
 
 <h3 id="unit-testing">Unit Testing</h3>
-[TBA - WIP]
+I attempted to add Unit Testing with Jest but Puppeteer is already a good tool for automated testing so at the moment I did not implement it.
