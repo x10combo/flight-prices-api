@@ -282,4 +282,4 @@ You should now see this in your Charles window:
 
 
 <h3 id="unit-testing">Unit Testing</h3>
-I attempted to add Unit Testing with Jest but Puppeteer is already a good tool for automated testing so at the moment I did not implement it.
+<p>I attempted to add Unit Testing with Jest but Puppeteer is already a good tool for automated testing so at the moment I did not implement it. Unit Testing for this project would require the refactoring of the original code in different functions, or "units",  which can be tested individually,by mocking elements like the input, client-server communication, body parameters, etc.</p>
